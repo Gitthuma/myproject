@@ -7,6 +7,6 @@ from . import views
 # Create a list to hold all the urls
 # Create the first url
 urlpatterns = [
-    path('', views.index, name=index)
+    path('', views.index, name='index')
 
 ]
