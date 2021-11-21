@@ -1,4 +1,6 @@
+# import http to use in the return statement of the index function
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
