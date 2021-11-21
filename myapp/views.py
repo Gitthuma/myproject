@@ -1,4 +1,5 @@
 # import http to use in the return statement of the index function
+from os import name
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -8,7 +9,9 @@ from django.http import HttpResponse
 
 # return a HttpResponse
 # Change HttpResponse to a render request
+# Add a variable to make the program dynamic and send that data to template
 
 
 def index(request):
-    return render(request, 'index.html')
+    name = "George"
+    return render(request, 'index.html', {'name': name})
