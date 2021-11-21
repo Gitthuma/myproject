@@ -6,6 +6,8 @@ from django.http import HttpResponse
 
 # create an index function that takes requests and will also be referenced by the views module in the urls.py file
 
+# return a HttpResponse
+
 
 def index(request):
-    pass
+    return HttpResponse('<h1>Hey, Welcome</h1>')
