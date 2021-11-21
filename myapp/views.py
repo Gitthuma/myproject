@@ -10,8 +10,15 @@ from django.http import HttpResponse
 # return a HttpResponse
 # Change HttpResponse to a render request
 # Add a variable to make the program dynamic and send that data to template
+# use context to hold multiple variables
 
 
 def index(request):
-    name = "George"
-    return render(request, 'index.html', {'name': name})
+    context = {
+        'name': 'George',
+        'age': '34',
+        'gender': 'male',
+        'nationality': 'Kenya'
+    }
+
+    return render(request, 'index.html', context)
